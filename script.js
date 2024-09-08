@@ -55,5 +55,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
         return [date, time];
     }
+    update_time();
     setInterval(update_time, 1000);
 });
