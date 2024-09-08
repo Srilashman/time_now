@@ -13,10 +13,22 @@ document.addEventListener("DOMContentLoaded", function() {
     time_msg.classList.add("time");
     time_msg.textContent = "Time: " + time;
     time_container.appendChild(time_msg);
+    const hour_hand = document.getElementById("hour-hand");
+    const min_hand = document.getElementById("min-hand");
+    const sec_hand = document.getElementById("sec-hand");
+    function update_clock(time){
+        let secRatio = Number(time.slice(10, 12))/60;
+        let minRatio = (secRatio + Number(time.slice(5, 7)))/60;
+        let hourRatio = (minRatio + Number(time.slice(0, 2)))/12;
+        hour_hand.style.setProperty("--rotation", hourRatio * 360);
+        min_hand.style.setProperty("--rotation", minRatio * 360);
+        sec_hand.style.setProperty("--rotation", secRatio * 360);
+    }
     function update_time(){
         [date, time] = get_datetime();
         date_msg.textContent = "Date: " + date;
         time_msg.textContent = "Time: " + time;
+        update_clock(time);
     }
     function get_datetime(){
         let currentdate = new Date(); 
