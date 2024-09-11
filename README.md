@@ -30,8 +30,7 @@ You can view the live demo of the project [here](https://srilashman.github.io/ti
 
 Open https://localhost:3000 in your browser to view the project
 
-4. Jest Unit Test
-    To run the Jest Unit Tests:
+4. To run the Jest Unit Tests:
     ```bash
     npm test
 
