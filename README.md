@@ -7,10 +7,10 @@ This project is diaplays a digital clock and analog clock
 You can view the live demo of the project [here](https://srilashman.github.io/time_now/)
 
 ## Features
-✅ Date
-✅ Digital Time
-✅ Analog time
-❌ Stopwatch
+✅ Date <br>
+✅ Digital Time <br>
+✅ Analog time <br>
+❌ Stopwatch <br>
 ❌ Alarm
 
 ## Installation and Setup
@@ -20,9 +20,11 @@ You can view the live demo of the project [here](https://srilashman.github.io/ti
    cd time_now
 
 2. Install dependencies
+    ```bash
    npm install --save-dev jest
    npm install express
 
 3. Run the server
+    ```bash
    npm start
 
