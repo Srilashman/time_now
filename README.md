@@ -24,7 +24,9 @@ You can view the live demo of the project [here](https://srilashman.github.io/ti
    npm install --save-dev jest
    npm install express
 
-3. Run the server
+3. Run the Project
     ```bash
    npm start
+
+Open https://localhost:3000 in your browser to view the project
 
