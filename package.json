@@ -2,9 +2,10 @@
   "name": "time_now",
   "version": "1.0.0",
   "description": "",
-  "main": "script.js",
+  "main": "../public/script.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "node src/server.js"
   },
   "jest": {
     "testEnvironment": "jsdom"
@@ -12,5 +13,8 @@
   "devDependencies": {
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0"
+  },
+  "dependencies": {
+    "express": "^4.20.0"
   }
 }

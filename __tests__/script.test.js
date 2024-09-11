@@ -1,5 +1,5 @@
 
-const get_datetime = require('../script');
+const get_datetime = require('../public/script');
 
 describe('get_datetime function', () => {
     beforeEach(() => {
