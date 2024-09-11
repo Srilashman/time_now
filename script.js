@@ -30,31 +30,33 @@ document.addEventListener("DOMContentLoaded", function() {
         time_msg.textContent = "Time: " + time;
         update_clock(time);
     }
-    function get_datetime(){
-        let currentdate = new Date(); 
-        let date = currentdate.getDate() + "/"
-                    + (currentdate.getMonth()+1)  + "/" 
-                    + currentdate.getFullYear();
-
-        let hour_0 = '';
-        let min_0 = '';
-        let sec_0 = '';
-        if(currentdate.getHours() < 10){
-            hour_0 = '0';
-        }
-        if(currentdate.getMinutes() < 10){
-            min_0 = '0';
-        }
-        if(currentdate.getSeconds() < 10){
-            sec_0 = '0'
-        }
-
-        let time = hour_0 + currentdate.getHours() + " : "  
-                   + min_0 + currentdate.getMinutes() + " : " 
-                   + sec_0 + currentdate.getSeconds();
-
-        return [date, time];
-    }
+    
     update_time();
     setInterval(update_time, 1000);
 });
+function get_datetime(){
+    let currentdate = new Date(); 
+    let date = currentdate.getDate() + "/"
+                + (currentdate.getMonth()+1)  + "/" 
+                + currentdate.getFullYear();
+
+    let hour_0 = '';
+    let min_0 = '';
+    let sec_0 = '';
+    if(currentdate.getHours() < 10){
+        hour_0 = '0';
+    }
+    if(currentdate.getMinutes() < 10){
+        min_0 = '0';
+    }
+    if(currentdate.getSeconds() < 10){
+        sec_0 = '0'
+    }
+
+    let time = hour_0 + currentdate.getHours() + " : "  
+               + min_0 + currentdate.getMinutes() + " : " 
+               + sec_0 + currentdate.getSeconds();
+
+    return [date, time];
+}
+module.exports = get_datetime;
